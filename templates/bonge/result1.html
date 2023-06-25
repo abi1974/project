@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{% static 'bonge/css/result.css' %}">
+
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,200" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+   
+ <script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+  
+</head>
+<body>
+    <div class="header"></div>
+     <div id="side-right9">
+      <div id="container1">
+        <div class="subContainer1">
+          <p><h1>Consult a doctor</h1></p>
+          <p><h2>Your symptoms may require medical evaluation. Schedule an appointment with your doctor. If your symptoms get worse, see a doctor immediately.</h2></p>
+          <p id="info"><span class="material-symbols-outlined">
+          info
+          </span>
+          <span class="info">Information</span></p>
+          
+        </div>
+        <div class="subContainer2"><img src="{% static 'bonge/images/sthethoscope.png' %}" alt=""></div>
+
+      </div>
+
+      <div id="container2">
+        <p id="p1">Possible Conditions</p>
+        
+        <div class="subContainer3"><p id="dis">{{disease}}</p></div>
+        <div class="subContainer4"></div>
+        <p id="p2">List of possible conditions may not be complete, is provided solely for informational purposes, is not a qualified medical opinion and can not replace the medical diagnosis.</p>
+
+      </div>
+
+      <div id="container3">
+        <span id="sub3">Your answers</span>
+        <p>
+        <span id="sub1">Show</span>
+        <span class="material-symbols-outlined" id="sub2">
+          expand_more
+        </span>
+        </p>
+      </div>
+      <button onclick="generatePDF()" type="button" id="download" ><p>Download PDF report</p></button>
+       <button type="button" id="consult"><p>Consult a doctor</p></button>
+    </div>
+
+
+
+      
+     
+
+</body>
+</html>

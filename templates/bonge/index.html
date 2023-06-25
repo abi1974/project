@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--css file linking below-->
+    <link rel="stylesheet" href="{% static 'bonge/css/styles.css' %}" />
+    <title>MedSafe</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+   
+  </head>
+  <body>
+   <div class="loadingPage">
+    <div class="loader"></div>
+   </div>
+<script>
+  $(window).on("load",function(){
+
+    $(".loadingPage").fadeOut("fast");
+  });
+</script>
+    <header>
+      <div class="main-container">
+        <nav><!--navbar starting-->
+          <div class="logo">
+            <img src="{% static 'bonge/images/logo.svg' %}" /><!--logo file-->
+          </div>
+         
+
+          <ul>
+            <li>
+              <a href="{% url 'symptom' %}">Symptom Checker</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">Lifestyle</a>
+            </li>
+          </ul>
+       
+          <ul>
+            <li>
+              <a href="{% url 'doctor' %}">Find a doctor</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="{% url 'team' %}">Log in / Sign Up</a>
+            </li>
+          </ul>
+          
+
+          <ul>
+            <li>
+              <div class="search-1">
+               <div class="icon"></div>
+               <div class="input">
+
+                  <input type="text" placeholder="Search..." id="newsearch">
+
+               </div>
+               <span class="clear" onclick="document.getElementById('newsearch').value = '' "></span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        </div>
+      </header>
+        <div class="container">
+          <!--making image slider-->
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="{% static 'bonge/images/Home.jpg' %}">
+               <a href="#"><h1>Sign up</h1></a>
+               <img src="{% static 'bonge/images/output-onlinepngtools (2).png' %}" id="one">
+              </div>
+              <div class="swiper-slide"><img src="{% static 'bonge/images/Frame 3.jpg' %}">
+              <a href="#"><h2>Learn more</h2></a>
+              <img src="{% static 'bonge/images/output-onlinepngtools (2).png' %}" id="two">
+              </div>
+               <div class="swiper-slide"><img src="{% static 'bonge/images/Frame 4.jpg' %} "></div></div>
+              
+            </div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+           </div>
+        </div>
+
+        <!--navbar ending-->
+      </div>
+
+      
+   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        autoplay: {
+          delay: 3000,disableOnInteraction:false,
+        },
+  // Optional parameters
+ 
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+
+});
+  </script>
+   <div class="card">
+   <h2>What concerns you about your health today?</h2>
+   <a href="login.html"><button>Start Checkup</button></a>
+  </div>
+    
+   <div class="card1">
+   
+      <a href="login.html"><h1>Request an appointment</h1></a>
+      <img src="{% static 'bonge/images/arrow_right_alt_FILL0_wght100_GRAD0_opsz48.png' %}" class="move">
+      <div class="line-1"></div>
+  </div>
+  <div class="card2">
+     <a href="#"><h1>Search for diseases & conditions</h1></a>
+      <img src="{% static 'bonge/images/arrow_right_alt_FILL0_wght100_GRAD0_opsz48.png' %}">
+       <div class="line-2"></div>
+  </div>
+ </div>
+  <div class="card3">
+     <a href="#"><h1>Health Information</h1></a>
+      <img src="{% static 'bonge/images/arrow_right_alt_FILL0_wght100_GRAD0_opsz48.png' %}">
+  </div>
+  <div class="card4">
+    <div class="wrapper-1">
+    <img  src="{% static 'bonge/images/Frame 5.svg' %}">
+    <img  src="{% static 'bonge/images/Frame 6.svg' %}">
+     <img  src="{% static 'bonge/images/Frame 7.svg' %}">
+     </div>
+     <div id="at"><h1>We are there for&ensp;<span class="auto">You</span></h1></div>
+
+
+  </div>
+
+  
+  <!--Autotyping script-->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+
+    var typed= new Typed(".auto",{
+      strings : [" You"," Your loved ones"," You always"," You"," Your loved ones"," You always"," You"," Your loved ones"," You always"," You"," Your loved ones"," You always"],
+      typeSpeed : 200,
+      backSpeed : 200,
+      looped : true
+    })
+    
+
+
+
+
+  </script>
+  <div class="bottom-card">
+    
+    <h2>Conditions</h3>
+    <img src="{% static 'bonge/images/arrow_right_alt_FILL0_wght100_GRAD0_opsz48.png' %}">
+      
+     <nav id="nav2">
+    <ul>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Gastrointestinal_disease">Digestive Disorders</a>
+      </li>
+    </ul>
+     <ul>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Diabetes">Diabetes</a>
+      </li>
+    </ul>
+    
+     
+     <ul>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Skin_condition">Skin Problems</a>
+      </li>
+    </ul>
+     <ul>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Obesity">Weight loss & Obesity</a>
+      </li>
+    </ul>
+
+     <ul>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Sexual_and_reproductive_health">Sexual Health</a>
+      </li>
+    </ul>
+     
+  </nav>
+ 
+  <div class="nav3">
+    <ul>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Deep_vein_thrombosis">DVT</a>
+      </li>
+    </ul>
+     <ul>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Multiple_myeloma" id="m">Multiple Myeloma</a>
+      </li>
+    </ul>
+     <ul>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Multiple_sclerosis" id="t">Multiple Sclerosis</a>
+      </li>
+    </ul>
+     <ul>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Dementia" id="y">Dementia</a>
+      </li>
+    </ul>
+     <ul>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Treatment_of_cancer">Cancer Treatment</a>
+      </li>
+    </ul>
+  </div>
+  
+  </div>
+  <div class="break"></div>
+  <div class="live"><h2>Living</h2>
+    <img src="{% static 'bonge/images/arrow_right_alt_FILL0_wght100_GRAD0_opsz48.png' %}" alt="">
+  </div>
+  
+   <div class="break-2"></div>
+    <div class="con-1">
+      <a href="https://en.wikipedia.org/wiki/Mental_health"><img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/home_page/wellness-mental-health.jpg?resize=484px:*&amp;output-quality=50" alt="wellness-mental-health" class="first"></a>
+      <a href="https://en.wikipedia.org/wiki/Weight_management"><img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/home_page/Wellness_Diet_Weight.jpg?resize=484px:*&amp;output-quality=50" alt="Wellness_Diet_Weight" class="second"></a>
+      <a href="https://en.wikipedia.org/wiki/Health_and_Ageing"><img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/webmd_homepage_healthy_aging_image_beach_other/464x634_webmd_homepage_healthy_aging_image_beach_other.jpg?resize=484px:*&amp;output-quality=50" alt="illustration of senior man at the beach" class="third"></a>
+      <a href="https://en.wikipedia.org/wiki/Sexual_desire_and_intimate_relationships"><img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/home_page/Wellness_Health_Beauty.jpg?resize=484px:*&amp;output-quality=50" alt="Wellness_Health_Beauty" class="fourth"></a>
+      <a href="https://en.wikipedia.org/wiki/Benefits_of_physical_activity"><img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/home_page/Wellness_Fitness_and_Excercise.jpg?resize=484px:*&amp;output-quality=50" alt="Wellness_Fitness_and_Excercise" class="fifth"></a>
+    </div>
+    <div class="quote">
+      <h1>Mental health</h1>
+      <h2>Diet & Weight<br> Management</h2>
+      <h3>Healthy Aging</h3>
+      <h4>Sex & Relationships</h4>
+      <h5>Fitness & Exercise</h5>
+    </div>
+    <script>
+
+      const icon = document.querySelector('.icon');
+       const search = document.querySelector('.search-1');
+      icon.onclick = function(){
+        search.classList.toggle('active');
+      }
+    </script>
+    <div class="layout-1">
+      <div class="linebr"></div>
+      <div class="side-img">
+        <img src="{% static 'bonge/images/accuray-MFSEP2g4YS0-unsplash.jpg' %}" alt="">
+      </div>
+      <div class="side-text">
+        <p>Medical practice has evolved significantly over the years, driven by technological advancements, scientific breakthroughs, and a deeper understanding of human health. Today, healthcare professionals have access to a wide range of tools, techniques, and treatments that have revolutionized patient care and outcomes. This essay explores the various aspects of modern medical practice and highlights the transformative impact it has had on healthcare.
+          <br>One of the most significant advancements in medical practice is the development of sophisticated diagnostic tools. From magnetic resonance imaging (MRI) and computed tomography (CT) scans to genetic testing and molecular diagnostics, healthcare providers can now accurately identify diseases and conditions at an early stage. This allows for prompt and targeted interventions, leading to better treatment outcomes and improved patient prognosis.
+          <br>Advancements in medical technology have facilitated the rise of minimally invasive procedures. Techniques such as laparoscopy, robotic-assisted surgery, and catheter-based interventions have revolutionized surgical practice.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="donate">
+
+      <h1>MedSafe is a not-for-profit organisation.</h1>
+      <a href="#"><button></a>Make a donation</button></a>
+
+    </div>
+    <div class="end-container">
+			<div class="main-text">
+			<span class="policy">Support</span>
+			<span class="about">About us</span>
+			<div class="logo-entities">
+			<span><i class="fa fa-facebook-f"></i></span>
+					<span><i class="fa fa-twitter"></i></span>
+						<span><i class="fa fa-instagram"></i></span>
+			</div>
+      <div class="horizontalScroller"></div>
+        <div class="supportText">
+        <p>We are incredibly grateful for your interest and support in our medical website. Your contribution plays a crucial role in helping us fulfill our mission of providing valuable information and support to individuals seeking medical guidance.</p>
+        <p>With your help, we can expand our reach, touch more lives, and create a positive impact on the health outcomes of countless individuals worldwide. Every contribution, no matter the size, makes a difference and helps us move closer to our vision of a healthier and more informed society.</p>
+       <p>By supporting us, you are joining a community of like-minded individuals dedicated to improving healthcare access and promoting well-being. Together, we can make a significant difference and empower individuals to take control of their health.
+
+We extend our deepest gratitude for your support and belief in our mission.</p>
+<p>Your generosity enables us to continue our vital work, and we are honored to have you as a part of our community. Thank you for making a difference in the lives of others through your support of our medical website.</p>
+
+
+
+    </div>
+    <div class="aboutText">
+      <p>Welcome to our medical website, where our mission is to provide reliable and up-to-date information to empower individuals in their healthcare journey. We understand that navigating the complex world of medicine can be overwhelming, and we are here to guide you every step of the way.</p>
+      <p>At our core, we believe that everyone deserves access to quality healthcare information. We are committed to promoting health literacy and fostering a culture of informed decision-making. By equipping individuals with the knowledge they need, we aim to empower them to make educated choices about their well-being.</p>
+     
+      <p>Thank you for choosing our medical website as your trusted source of information. We are honored to be a part of your healthcare journey, and we are committed to providing you with the resources and support you need to make informed decisions for your health and well-being.</p>
+    </div>
+			</div>
+  
+    </div>
+   <script>
+  const about= document.querySelector(".about")
+  const aboutText=document.querySelector(".aboutText")
+  const supportText=document.querySelector(".supportText")
+ const policy= document.querySelector(".policy")
+  const horizontal=document.querySelector(".horizontalScroller")
+ console.log("hello world")
+ about.onclick=function(){
+  aboutText.style.display="block";
+  supportText.style.display="none";
+  aboutText.style.transition="all 0.3s"
+  horizontal.style.transform="translateX(100px)"
+  horizontal.style.width="78px"
+
+ }
+   policy.onclick=function(){
+  aboutText.style.display="none";
+  supportText.style.display="block";
+  horizontal.style.transform="translateX(0px)"
+horizontal.style.width="72px"
+ }
+  
+  </script>
+  </body>
+</html>

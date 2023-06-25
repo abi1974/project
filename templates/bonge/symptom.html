@@ -1,0 +1,566 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symptom</title>
+    <link rel="stylesheet" href="{% static 'bonge/css/style.css' %}" />
+
+    <!--script linking-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,200,0,200" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+     <script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="loadingPage">
+    <div class="loader"></div>
+   </div>
+<script>
+  $(window).on("load",function(){
+
+    $(".loadingPage").fadeOut("slow");
+  });
+</script>
+
+    <div class="header">
+      <div class="logo">
+        <img src="{% static 'bonge/images/logo.svg' %}" alt="" />
+        <h1>MedSafe</h1>
+      </div>
+    </div>
+    
+      <div class="side-left">
+        <ul class="progress-bar">
+          <li class="active sp">Introduction</li>
+          <li class="active">Patient</li>
+          <li class="active">Symptoms</li>
+          
+          <li class="active">Interview</li>
+          <li class="active">Results</li>
+        </ul>
+      </div>
+      <div id="side-right">
+        <form id="Form1">
+          <div class="form-group1">
+            <img src="{% static 'bonge/images/doctor (1).png' %}" alt="" />
+            <h1>Check your symptoms</h1>
+            <p>
+              Take a short (3 min) symptom assessment.,<br />
+              The information you give is safe and won’t be<br />
+              shared. Your results will include:
+            </p>
+            <ul>
+              <li>Possible causes of symptoms.</li>
+              <li>Recommendations on what to do next.</li>
+            </ul>
+          </div>
+          <div class="line">
+            <button type="button" id="next1">Next &#65515;</button>
+          </div>
+        </form>
+      </div>
+      <div id="side-right2">
+        <form id="Form2">
+          <div class="form-group2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 240 204"
+              role="presentation"
+              class="ui-icon ui-message__illustration"
+              id="agreement-illustration"
+              style="--icon-color: transparent"
+            >
+              <circle cx="120" cy="102" r="102" fill="#E6F9F2"></circle>
+              <path
+                fill="#fff"
+                fill-rule="evenodd"
+                stroke="#333D48"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m166 64-26-26H79.998a6 6 0 0 0-6 6v114a8 8 0 0 0 8 8H160a6 6 0 0 0 6-6V64z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                fill="#D6DDE3"
+                fill-rule="evenodd"
+                d="M96.624 39c.248 1.63.376 3.3.376 5 0 14.368-9.183 26.592-22 31.122V39h21.624z"
+                clip-rule="evenodd"
+              ></path>
+              <circle
+                cx="62"
+                cy="42"
+                r="32"
+                fill="#fff"
+                stroke="#333D48"
+                stroke-width="2"
+              ></circle>
+              <path
+                fill="#E7EBEE"
+                fill-rule="evenodd"
+                d="M62 24a9 9 0 0 0-9 9v8a9 9 0 1 0 18 0v-8a9 9 0 0 0-9-9zm0 26a5 5 0 0 1-5-5V34a5 5 0 0 1 10 0v11a5 5 0 0 1-5 5z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                fill="#333D48"
+                d="M54 33a8 8 0 0 1 8-8v-2c-5.523 0-10 4.477-10 10h2zm0 8v-8h-2v8h2zm8 8a8 8 0 0 1-8-8h-2c0 5.523 4.477 10 10 10v-2zm8-8a8 8 0 0 1-8 8v2c5.523 0 10-4.477 10-10h-2zm0-8v8h2v-8h-2zm-8-8a8 8 0 0 1 8 8h2c0-5.523-4.477-10-10-10v2zm0 24a4 4 0 0 1-4-4h-2a6 6 0 0 0 6 6v-2zm-4-4V34h-2v11h2zm0-11a4 4 0 0 1 4-4v-2a6 6 0 0 0-6 6h2zm4-4a4 4 0 0 1 4 4h2a6 6 0 0 0-6-6v2zm4 4v11h2V34h-2zm0 11a4 4 0 0 1-4 4v2a6 6 0 0 0 6-6h-2z"
+              ></path>
+              <rect
+                width="24"
+                height="24"
+                x="50"
+                y="36"
+                fill="#FFC037"
+                stroke="#EBA100"
+                stroke-width="2"
+                rx="12"
+              ></rect>
+              <circle cx="62" cy="46" r="3" fill="#333D48"></circle>
+              <rect
+                width="2"
+                height="8"
+                x="61"
+                y="46"
+                fill="#333D48"
+                rx="1"
+              ></rect>
+              <circle
+                cx="178"
+                cy="158"
+                r="32"
+                fill="#fff"
+                stroke="#333D48"
+                stroke-width="2"
+              ></circle>
+              <path
+                fill="#2DC692"
+                fill-rule="evenodd"
+                stroke="#1AA175"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m164 161 4-4 6 6 16-16 4 4-20 20-10-10z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                fill="#D6DDE3"
+                fill-rule="evenodd"
+                d="M140 41v18a8 8 0 0 0 8 8h17v-2l-25-24z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                fill="#C1CBD5"
+                fill-rule="evenodd"
+                stroke="#333D48"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M140 38v18a8 8 0 0 0 8 8h18l-26-26z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                stroke="#C1CBD5"
+                stroke-width="2"
+                d="M94 89h40m-40-8h52M94 97h48m-48 8h40m-40 8h52m-52 8h44m-44 14h24"
+              ></path>
+            </svg>
+
+            <h1>Terms of Service</h1>
+            <p>
+              Before using the checkup, please read the Terms<br />
+              of Service and remember:
+            </p>
+            <ul>
+              <li>
+                Checkup isn’t a diagnosis. It’s only for your<br />
+                information and not a qualified medical opinion.
+              </li>
+              <li>
+                Checkup isn’t for emergencies. Call your<br />
+                local emergency number right away when<br />
+                there’s a health emergency.
+              </li>
+              <li>
+                Your data is safe. The information you give<br />
+                won’t be shared or used to identify you.
+              </li>
+            </ul>
+            <div class="check1">
+              <input type="checkbox" id="terms" />
+              <label for="terms">I read and accept Terms of service.</label>
+            </div>
+            <input type="checkbox" id="privacy" />
+            <label for="privacy"
+              >I consent to use my health information for the test.</label
+            >
+          </div>
+          <div class="line">
+            <button type="button" id="next2">Next &#65515;</button>
+          </div>
+          <button type="button" id="back1">&#65513; Back</button>
+        </form>
+      </div>
+      <div id="side-right3">
+        <h1>Who is the checkup for?</h1>
+          
+        <button id="box1">
+          <input type="radio" name="person" value="myself" id="radio1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 48 48"
+            role="img"
+            class="ui-icon ui-tile__icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M19 5a5 5 0 1 1 10 0v2a4.968 4.968 0 0 1-1.008 3.008c4.41.203 7.852 3.96 7.617 8.414l-.41 7.84a5.003 5.003 0 0 1-3.3 4.445c-.02.32-.051.637-.087.953l-1.507 12.81A4.003 4.003 0 0 1 26.332 48h-4.664a4.003 4.003 0 0 1-3.973-3.531L16.187 31.66a17.132 17.132 0 0 1-.066-3.289l.164-2.129C13.941 25.902 12 23.891 12 21.29V18a8 8 0 0 1 8-8 4.972 4.972 0 0 1-1-3zm14.2 21.156a2.989 2.989 0 0 1-1.313 2.328 1.032 1.032 0 0 1-.008-.113l-.883-11.45-1.992.157.879 11.45a15.02 15.02 0 0 1-.059 2.902L28.32 44.234A2.002 2.002 0 0 1 26.332 46H25V28h-2v18h-1.332a2.002 2.002 0 0 1-1.988-1.766L18.176 31.43a15.02 15.02 0 0 1-.059-2.903l.184-2.41a3.77 3.77 0 0 0 .406-.129l3-1.09A5.002 5.002 0 0 0 25 20.2v-.812a2.002 2.002 0 0 0-2.633-1.899L19 18.613V17h-2v1.613a2.002 2.002 0 0 0 2.633 1.899L23 19.387v.812c0 1.262-.79 2.387-1.977 2.82l-3 1.09C16.07 24.82 14 23.371 14 21.29V18c0-3.313 2.688-6 6-6h3V9.828A3.001 3.001 0 0 1 21 7V5a3 3 0 0 1 6 0v2a3.001 3.001 0 0 1-2 2.828V12h2.621a6.002 6.002 0 0 1 5.992 6.316zm0 0"
+            ></path>
+          </svg>
+          <h2>Myself</h2>
+        </button>
+
+        <button id="box2">
+                    <input type="radio" name="person" value="someoneelse" id="radio2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 48 48"
+            role="img"
+            class="ui-icon ui-tile__icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 0a5 5 0 0 0-5 5v2c0 1.129.375 2.172 1.008 3.008-4.41.203-7.852 3.96-7.617 8.414l.41 7.84a5.007 5.007 0 0 0 3.691 4.566c.082 2.988.301 5.973.653 8.945l.55 4.696A4.003 4.003 0 0 0 9.668 48h4.664a4.003 4.003 0 0 0 3.973-3.531l.55-4.696c.766-6.488.899-13.03.395-19.546l-.11-1.45c.114.051.235.102.364.153 1.176.468 2.832.93 4.969 1.043l.328 6.289a5.007 5.007 0 0 0 3.691 4.566c.082 2.988.301 5.973.653 8.945l.55 4.696A4.003 4.003 0 0 0 33.668 48h4.664a4.003 4.003 0 0 0 3.973-3.531l.55-4.696a99.56 99.56 0 0 0 .653-8.945 5.007 5.007 0 0 0 3.691-4.566l.41-7.84c.235-4.453-3.207-8.211-7.617-8.414A4.968 4.968 0 0 0 41 7V5a5 5 0 1 0-10 0v2c0 1.129.375 2.172 1.008 3.008a7.974 7.974 0 0 0-5.211 2.262c-.719.46-1.527.566-2.395.433-.933-.14-1.886-.555-2.715-1.027C20.13 10.789 18.302 10 16.313 10H16c.629-.836 1-1.875 1-3V5a5 5 0 0 0-5-5zm16.078 13.816.004-.004A5.967 5.967 0 0 1 32.379 12H35V9.828A3.001 3.001 0 0 1 33 7V5a3 3 0 0 1 6 0v2a3.001 3.001 0 0 1-2 2.828V12h2.621a6.002 6.002 0 0 1 5.992 6.316l-.414 7.84a2.996 2.996 0 0 1-1.652 2.528 99.92 99.92 0 0 0-.297-8.457l-.254-3.305-1.992.156.254 3.3a99.065 99.065 0 0 1-.387 19.161l-.55 4.695A2.002 2.002 0 0 1 38.331 46H37V28h-2v18h-1.332a2.002 2.002 0 0 1-1.988-1.766l-.551-4.695a99.065 99.065 0 0 1-.387-19.16l.254-3.3-1.992-.157-.254 3.305a100.224 100.224 0 0 0-.297 8.457 3.004 3.004 0 0 1-1.652-2.528l-.414-7.84a5.964 5.964 0 0 1 1.691-4.5zm-3.015.942a7.086 7.086 0 0 1-.961-.078c-1.274-.192-2.465-.73-3.407-1.266C19.25 12.59 17.785 12 16.312 12H13V9.828A3 3 0 0 0 15 7V5a3 3 0 0 0-6 0v2a3 3 0 0 0 2 2.828V12H8.379a6.002 6.002 0 0 0-5.992 6.316l.414 7.84a2.996 2.996 0 0 0 1.652 2.528 99.92 99.92 0 0 1 .297-8.457l.254-3.305 1.992.156-.254 3.3a99.112 99.112 0 0 0 .387 19.165l.55 4.691A2.002 2.002 0 0 0 9.669 46H11V28h2v18h1.332a2.002 2.002 0 0 0 1.988-1.766l.551-4.691c.746-6.36.879-12.777.387-19.164l-.254-3.3 1.617-.86h.004-.004v-.004l.008.008c.012.007.031.023.062.043.059.043.157.109.293.187.27.164.692.39 1.262.617.953.383 2.328.774 4.133.895a7.919 7.919 0 0 1 .683-3.207zm0 0"
+            ></path>
+          </svg>
+          <h2>Someone else</h2>
+        </button>
+
+        <div class="line2">
+          <button type="button" id="back2">&#65513; Back</button>
+        </div>
+      </div>
+    
+    <div id="side-right4">
+      <h1 id="one">What is your sex?</h1>
+      <h1 id="two">What is his/her sex?</h1>
+      <button type="button" id="card1">
+                  <input type="radio" name="sex" value="Male" id="radio3">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 48 48"
+          role="img"
+          class="ui-icon ui-tile__icon"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M24 7.5V9h15.46L27.23 21.23A12.705 12.705 0 0 0 18.75 18C11.707 18 6 23.707 6 30.75S11.707 43.5 18.75 43.5 31.5 37.793 31.5 30.75a12.68 12.68 0 0 0-3.21-8.457L40.5 10.082V25.5H42v-18zm6 23.25C30 36.965 24.965 42 18.75 42S7.5 36.965 7.5 30.75 12.535 19.5 18.75 19.5 30 24.535 30 30.75zm0 0"
+          ></path>
+        </svg>
+        <h2>Male</h2>
+      </button>
+      <button type="button" id="card2">
+                  <input type="radio" name="sex" value="Female" id="radio4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 48 48"
+          role="img"
+          class="ui-icon ui-tile__icon"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M36.75 15.75c0 6.79-5.309 12.34-12 12.727v6.773h9.75v1.5h-9.75V45h-1.5v-8.25H13.5v-1.5h9.75v-6.773c-6.691-.387-12-5.938-12-12.727C11.25 8.707 16.957 3 24 3s12.75 5.707 12.75 12.75zM24 27c6.215 0 11.25-5.035 11.25-11.25S30.215 4.5 24 4.5 12.75 9.535 12.75 15.75 17.785 27 24 27zm0 0"
+          ></path>
+        </svg>
+        <h2>Female</h2>
+      </button>
+      <div class="line3">
+        <button type="button" id="back3">&#65513; Back</button>
+      </div>
+    </div>
+    <div id="side-right5">
+      <h1>How old are you?</h1>
+      <!--
+      <div id="container">
+        <input
+          id="new-slider"
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          oninput="this.nextElementSibling.value = this.value"
+        />
+
+        <div id="slider-value">0</div>
+        <div id="sliderArrow">
+          <img src="./images/slider arrow.png" id="slider" />
+        </div>
+      
+
+        <button id="minus">&#8722;</button>
+        <button id="plus">&#43;</button>
+      </div>
+      -->
+      <div class="container">
+        <div class="range">
+          <div class="range__content">
+            <div class="range__slider">
+              <div class="range__slider-line" id="range-line"></div>
+            </div>
+
+            <div class="range__thumb" id="range-thumb">
+              <div class="range__value">
+                <span class="range__value-number" id="range-number">50</span>
+              </div>
+            </div>
+
+            <input
+              type="range"
+              class="range__input"
+              id="range-input"
+              min="0"
+              max="100"
+              value="0"
+              step="1"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="line4">
+        <button type="button" id="back4">&#65513; Back</button>
+        <button type="button" id="next3">Next &#65515;</button>
+      </div>
+    </div>
+
+    <div id="side-right6">
+      <h1>Add your symptoms</h1>
+<form action="" method="post">
+      <h2>Please use the list box to accurately add your symptoms</h2>
+
+      <div class="search-bar">
+        <select name="countries" id="countries" multiple>
+          <option value="1">Dry-eyes</option>
+          <option value="2">Head-ache</option>
+          <option value="3">Nausea</option>
+          <option value="4">Stomach-pain</option>
+          <option value="5">Acidity</option>
+          <option value="6">Joint-pain</option>
+          <option value="7">Ear-pain</option>
+          <option value="8">Cold-fever</option>
+          <option value="9">High-temp</option>
+          <option value="10">Vomitting</option>
+          <option value="11">Rashes</option>
+          <option value="12">Pimples</option>
+
+          <option value="13">Gum-Problems</option>
+          <option value="14">Tooth-ache</option>
+          <option value="15">Back-pain</option>
+        </select>
+      </div>
+</form>
+      <!--
+         <div class="search">
+        <input type="text" placeholder="Search" />
+        <i class="fa fa-angle-down"></i>
+      </div>
+      <div class="content1">
+        
+        <ul class="options">
+         
+          <li onclick="getValue()" class="Dry-eyes">Dry eyes</li>
+          <li onclick="getValue()" class="Head-ache">Head ache</li>
+          <li onclick="getValue()" class="Nausea">Nausea</li>
+          <li onclick="getValue()" class="Stomach-pain">Stomach pain</li>
+          <li onclick="getValue()" class="Elbow-pain">Elbow pain</li>
+          <li onclick="getValue()" class="Joint-pain">Joint pain</li>
+          <li onclick="getValue()" class="Acidity">Acidity</li>
+          <li onclick="getValue()" class="Ear-pain">Ear pain</li>
+          <li onclick="getValue()" class="Cold-fever">Cold ,fever</li>
+          <li onclick="getValue()" class="High-temp">High temp</li>
+          <li onclick="getValue()" class="Vomitting">Vomitting</li>
+          <li onclick="getValue()" class="Rashes">Rashes</li>
+          <li onclick="getValue()" class="Pimples">Pimples</li>
+          <li onclick="getValue()" class="Gum-Problems">Gum problems</li>
+          <li onclick="getValue()" class="Tooth-ache">Toothache</li>
+          <li onclick="getValue()" class="Back-ache">Back ache</li>
+          
+
+        </ul>
+      <div class="optionBox"></div>
+   
+    <div class="optionBox1"></div>
+    <div class="optionBox2"></div>
+    <div class="optionBox3"></div>
+
+    <div class="optionBox4"></div>
+    <div class="optionBox5"></div>
+    <div class="optionBox6"></div>
+    <div class="optionBox7"></div>
+    <div class="optionBox8"></div>
+    <div class="optionBox9"></div>
+    <div class="optionBox10"></div>
+    <div class="optionBox11"></div>
+    <div class="optionBox12"></div>
+    <div class="optionBox13"></div>
+    <div class="optionBox14"></div>
+    <div class="optionBox15"></div>
+    <div class="optionBox16"></div>
+-->
+      <span id="end-line"></span>
+      <button name="save" id="next4">
+       Next &#65515
+      </button>
+      <button type="button" id="back5">&#65513 Back</button>
+    </div>
+
+    <div id="side-right7">
+      <h2>What is his/her date of birth?</h2>
+      <div class="date-container" class="date-picker" value="01-01-2000">
+        <label for="">Day</label>
+        <label for="">Month</label>
+        <label for="">Year</label>
+        <input type="date" id="Date" />
+      </div>
+      <div class="date-container2">
+        <input type="text" placeholder="DD" class="dateText" id="pickDay" />
+        <input type="text" placeholder="MM" class="dateText" id="pickMonth" />
+        <input type="text" placeholder="YYYY" class="dateText" id="year" />
+      </div>
+      <div class="newHtmlContainer"></div>
+
+      <div class="endHolder">
+        <span id="end-line2"></span>
+        <button type="button" id="next5">Next &#65515;</button>
+        <button type="button" id="back6">&#65513; Back</button>
+      </div>
+    </div>
+    <div id="side-right8">
+
+  <div class="outer-container">
+        <div class="container3" id="container3">
+            <h1>Please select the severity of your pain</h1>
+            <div class="progress-bar3" id="progress-bar3"></div>
+            <div class="content3">
+                <div id="step-content">{{content}}</div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="confirm" class="confirm">
+                    <label for="step">Confirm</label>
+                </div>
+                <div class="actions-container">
+                    <button class="primary" onclick="prevStep()"><h3>&#8722</h3> </button>
+                    <button class="primary" onclick="nextStep()"> <h3>&#43</h3></button>
+                </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="endHolder2">
+        <span id="end-line3"></span>
+        <a href="{%url 'home' %}">
+        <button type="button" id="next6">Next &#65515;</button></a>
+        <button type="button" id="back7">&#65513; Back</button>
+      </div>
+
+    </div>
+
+    <div id="side-right10">
+      <p>Please check all the statements below that apply to you</p>
+      <div id="container4">
+        
+      <label id="question">I am overweight or obese</label>
+          <label id="Options"> <input type="radio" value="1" name="p0" />Yes </label>
+          <label id="Options"> <input type="radio" value="2" name="p0" />No </label>
+          <label id="Options"> <input type="radio" value="3" name="p0" />Don't know </label>
+   
+      </div>
+      <div id="container5">
+      <label id="question">I have hypertension</label>
+          <label id="Options"> <input type="radio" value="1" name="p0" />Yes </label>
+          <label id="Options"> <input type="radio" value="2" name="p0" />No </label>
+          <label id="Options"> <input type="radio" value="3" name="p0" />Don't know </label>
+      
+      </div>
+       <div id="container6">
+      <label id="question">I have smoked cigarettes</label>
+          <label id="Options"> <input type="radio" value="1" name="p0" />Yes </label>
+          <label id="Options"> <input type="radio" value="2" name="p0" />No </label>
+          <label id="Options"> <input type="radio" value="3" name="p0" />Don't know </label>
+         
+      </div>
+       <div id="container7">
+      <label id="question">I've recently suffered an injury</label>
+          <label id="Options"> <input type="radio" value="1" name="p0" />Yes </label>
+          <label id="Options"> <input type="radio" value="2" name="p0" />No </label>
+          <label id="Options"> <input type="radio" value="3" name="p0" />Don't know </label>
+      </div>
+      <div id="container8">
+      <label id="question">I have high cholestrol</label>
+          <label id="Options"> <input type="radio" value="1" name="p0" />Yes </label>
+          <label id="Options"> <input type="radio" value="2" name="p0" />No </label>
+          <label id="Options"> <input type="radio" value="3" name="p0" />Don't know </label>
+      
+      </div>
+      <button type="button" class="backBtn">&#65513; Back</button>
+        <button type="button" class="nextBtn">Next &#65515;</button>
+    </div>
+
+    <div id="side-right11">
+      <p>Please select a secondary symptom from the given list.</p>
+      <div id="wrapperMain">
+        <ul>
+          <p>A</p>
+          <li> <label for=""><input type="checkbox">Acidity</label></li>
+          <li> <label for=""><input type="checkbox">Abdominal pain</label></li>
+          <li> <label for=""><input type="checkbox">Anxiety</label></li>
+      
+           <p>C</p>
+          <li> <label for=""><input type="checkbox">Cough</label></li>
+          <li> <label for=""><input type="checkbox">Chills</label></li>
+          <li> <label for=""><input type="checkbox">Chest Pain</label></li>
+          <li> <label for=""><input type="checkbox">Cramps</label></li>
+          <li> <label for=""><input type="checkbox">Cold hands and feet</label></li>
+          <li> <label for=""><input type="checkbox">Continous feel for urination</label></li>
+            <li> <label for=""><input type="checkbox">Constipation</label></li>
+           <p>B</p>
+          <li> <label for=""><input type="checkbox"> Burning Micturition</label></li>
+          <li> <label for=""><input type="checkbox">Breathlessness</label></li>
+          <li> <label for=""><input type="checkbox">Blackheads</label></li>
+          <li> <label for=""><input type="checkbox">Bladder discomfort</label></li>
+          <li> <label for=""><input type="checkbox">Blister</label></li>
+          <li> <label for=""><input type="checkbox">Back Pain</label></li>
+          <li> <label for=""><input type="checkbox">Blurred and distorted vision</label></li>
+            <p>D</p>
+          <li> <label for=""><input type="checkbox"> Diarrhoea</label></li>
+          <li> <label for=""><input type="checkbox">Dehydration</label></li>
+          <li> <label for=""><input type="checkbox">Dizziness</label></li>
+ 
+        
+        </ul>
+      </div>
+      <div id="buttonClassWrapper"><button type="button" class="wrapperBack">&#65513; Back</button>
+        <button type="button" class="wrapperNext">Next &#65515;</button></div>
+    </div>
+    <script src="{% static 'bonge/js/script.js' %}"> </script>
+ 
+  </body>
+</html>

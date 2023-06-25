@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>doctors page</title>
+        {%load static %}
+        <link rel="stylesheet" href="{% static 'bonge/css/doc.css' %}" />
+    </head>
+    <body>
+        <center>
+            <form action="" method="post">
+                
+                {% csrf_token %}
+                <input type="text" name="department1" placeholder="Enter the department"/><br>
+                <input type="submit" id="sub" name="submit" value="search"><br>
+       
+                    {% for n in doc %}
+                
+              
+                
+                       
+                        
+                        <input type="text"  value="{{ n.name }}" name="name"><br>
+                        <input type="text" value="{{ n.qualification }}" name="qualification"><br>
+                        <input type="text"  value="{{n.department}}" name="department"><br>
+                        <input type="text" value="{{n.address}}" name="address"><br>
+                        <input type="text" value="{{n.consulting}}" name="consulting"><br>
+                        
+            
+                  
+                     {% endfor %}
+
+                        </form>
+
+                       
+                    
+            
+
+            
+        </center>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'bonge/css/login.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container" id="main">
+      <div class="Signup">
+        <form action="" method="post">
+          <h1>Create Account</h1>
+          {% csrf_token %}
+          <div class="social-container">
+            <a href="#" class="social"
+              ><i class="fab fa-facebook-f"
+                ><img src="{% static 'bonge/images/logo-facebookpng-32202.png' %}" alt="" /></i
+            ></a>
+            <a href="#" class="social"
+              ><i class="fab google-plus-g"
+                ><img src="./images/google-logo-9824.png" alt="" /></i
+            ></a>
+            <a href="https://www.instagram.com/jabhiraj90/" class="social"
+              ><i class="fab twitter"
+                ><img src="./images/insta-logo.png" alt="" /></i
+            ></a>
+          </div>
+
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name="email" placeholder="E-mail" />
+          <input type="password" name="password" placeholder="Password" />
+          <button id="signUp" >Sign up</button>
+        </form>
+       
+      </div>
+      <div class="Login">
+        <h1>Login here</h1>
+      <form action="login" method="post">
+          <div class="social-container">
+            <a href="#" class="social"
+              ><i class="fab fa-facebook-f"
+                ><img src="./images/logo-facebookpng-32202.png" alt="" /></i
+            ></a>
+            <a href="#" class="social"
+              ><i class="fab google-plus-g"
+                ><img src="./images/google-logo-9824.png" alt="" /></i
+            ></a>
+            <a href="https://www.instagram.com/jabhiraj90/" class="social"
+              ><i class="fab twitter"
+                ><img src="./images/insta-logo.png" alt="" /></i
+            ></a>
+          </div>
+
+          <input type="email" name="email" placeholder="E-mail" />
+          <input type="password" name="password" placeholder="Password" />
+          <a href="#">Forgot Password?</a>
+          <a href="#"><button id="signIn" name="login">Login</button></a>
+        </form>
+      </div>
+     
+      <div class="side-container">
+        <div class="side">
+          <div class="side-right">
+            <h2>Hi there!</h2>
+            <p>Welcome to MedSafe</p>
+            <a href="#"><button id="signup">Sign up</button></a>
+          </div>
+          <div class="side-left">
+            <h2>Welcome Back!</h2>
+            <p>Login to continue your medical journey</p>
+            <a href="{% url 'team' %}"><button id="login">Login</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const signUpButton = document.getElementById("signup");
+      const signInButton = document.getElementById("login");
+      const main = document.getElementById("main");
+
+      signInButton.addEventListener("click", () => {
+        main.classList.remove("right-panel-active");
+      });
+      
+        signUpButton.addEventListener("click", () => {
+        main.classList.add("right-panel-active");
+      });
+    </script>
+  </body>
+</html>

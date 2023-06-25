@@ -1,0 +1,75 @@
+
+{% load static %}
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'bonge/css/login2.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Lato:wght@300&family=Poppins:wght@500&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@500&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!--
+ <div class="header">
+      <div class="logo"><img src="./images/logo.svg" alt="" /></div>
+      <span>MedSafe</span>
+    </div>-->
+    <div class="Image">
+      <img
+        src="./images/wallpaperflare.com_wallpaper (6).jpg"
+        alt=""
+        id="bodyImage"
+      />
+    </div>
+    <div class="main">
+      <form action="" id="main">
+        <label for="" id="sign">Sign in</label>
+        <input type="text" id="username" required />
+        <label for="" id="userPlaceholder" class="Input">USERNAME</label>
+        <input type="password" id="password" required />
+        <label for="" id="passPlaceholder" class="Input">PASSWORD</label>
+
+        <div class="icon-tray">
+          <button style="font-size: 24px" id="fb" type="button">
+            <i class="fa fa-facebook-f"></i>
+          </button>
+          <button style="font-size: 24px" id="google" type="button">
+            <img src="./images/google-logo-9824.png" alt="" />
+          </button>
+          <button style="font-size: 24px" id="apple" type="button">
+            <i class="fa fa-apple"></i>
+          </button>
+          <button style="font-size: 24px" id="instagram" type="button">
+            <button style="font-size: 34px" id="github">
+              <i class="fa fa-github"></i>
+            </button>
+          </button>
+        </div>
+        <button style="font-size: 32px" id="submit">
+          <i class="fa fa-arrow-right"></i>
+        </button>
+        <a href="#">CREATE ACCOUNT</a>
+      </form>
+    </div>
+    <script src="{% static 'bonge/js/login.js' %}"></script>
+  </body>
+</html>
