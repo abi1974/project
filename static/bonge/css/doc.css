@@ -1,0 +1,17 @@
+body{
+    background-color: whitesmoke;
+}
+input{
+    width:30%;
+    height:6%;
+    border:1px;
+    border-radius: 5px;
+    padding: 8px 15px 8px 15px;
+    margin: 10px 0px 15px 0px;
+    box-shadow: 1px 1px 1px 2px 2px aqua;
+
+}
+#sub:hover{
+    background-color: rgba(252, 3, 136, 0.781);
+    color:wheat;
+}
